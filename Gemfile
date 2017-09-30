@@ -11,6 +11,7 @@ gem 'dm-postgres-adapter'
 group :test do
   gem 'rspec'
   gem 'cucumber'
+  gem 'orderly'
   gem 'rake'
   gem 'rubocop-rspec'
   gem 'rubocop'
