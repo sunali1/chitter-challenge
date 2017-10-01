@@ -1,17 +1,22 @@
 ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '../app', 'app.rb')
 require 'capybara/rspec'
-require './app/models/peep'
-require './app/models/user'
 require './app/app'
 require 'web_helper'
 require 'database_cleaner'
 require 'orderly'
+require_relative 'helpers/session'
+
 require 'simplecov'
 require 'simplecov-console'
 
 Capybara.app = Chitter
 
+RSpec.configure do |config|
+
+  config.include SessionHelpers
+
+end
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
