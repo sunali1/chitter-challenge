@@ -77,3 +77,8 @@ If you have time you can implement the following:
 And/Or:
 
 * Work on the css to make it look good (we all like beautiful things).
+
+Additional Gems used:
+
+https://github.com/jmondo/orderly
+for Acceptance Testing: Asserting Sort Order
