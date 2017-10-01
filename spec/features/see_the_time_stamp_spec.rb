@@ -5,6 +5,6 @@ feature "See the time peep was made" do
   Peep.create(peep: "My peep")
   Peep.create(peep: "Yay")
   Peep.create(peep: "Whoopee")
-    expect(page).to have_content(peep.created_at)
+    expect(page).to have_content(Peep.peep.created_at)
   end
 end

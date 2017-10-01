@@ -21,4 +21,16 @@ class Chitter < Sinatra::Base
     erb :peeps
   end
 
+  get '/users/new' do
+    erb :'users/new'
+  end
+
+  post '/users' do
+    user = User.create(email: params[:email],
+                      password: params[:password])
+    p user
+    user.save
+    p user
+    redirect to('/peeps/new')
+  end
 end
